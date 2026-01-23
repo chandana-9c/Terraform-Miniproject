@@ -1,0 +1,37 @@
+[0m[1maws_s3_bucket.website_bucket: Refreshing state... [id=s3bucketstaticweb001][0m
+[0m[1maws_s3_bucket_policy.public_policy: Refreshing state... [id=s3bucketstaticweb001][0m
+[0m[1maws_s3_object.error: Refreshing state... [id=s3bucketstaticweb001/error.html][0m
+[0m[1maws_s3_object.index: Refreshing state... [id=s3bucketstaticweb001/index.html][0m
+[0m[1maws_s3_bucket_public_access_block.public_access: Refreshing state... [id=s3bucketstaticweb001][0m
+
+[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+
+[0mTerraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+[33m│[0m [0m
+[33m│[0m [0m[0m  with aws_s3_bucket.website_bucket,
+[33m│[0m [0m  on main.tf line 2, in resource "aws_s3_bucket" "website_bucket":
+[33m│[0m [0m   2: resource "aws_s3_bucket" "website_bucket" [4m{[0m[0m
+[33m│[0m [0m
+[33m│[0m [0mwebsite is deprecated. Use the aws_s3_bucket_website_configuration resource instead.
+[33m│[0m [0m
+[33m│[0m [0m(and one more similar warning elsewhere)
+[33m╵[0m[0m
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mDeprecated attribute[0m
+[33m│[0m [0m
+[33m│[0m [0m[0m  on outputs.tf line 2, in output "website_url":
+[33m│[0m [0m   2:   value = aws_s3_bucket.website_bucket[4m.website_endpoint[0m[0m
+[33m│[0m [0m
+[33m│[0m [0mThe attribute "website_endpoint" is deprecated. Refer to the provider documentation for details.
+[33m│[0m [0m
+[33m│[0m [0m(and one more similar warning elsewhere)
+[33m╵[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mwebsite_url = "s3bucketstaticweb001.s3-website-ap-southeast-2.amazonaws.com"
