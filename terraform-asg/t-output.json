@@ -1,0 +1,12 @@
+{
+  "asg_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "demo-asg"
+  },
+  "launch_template_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "lt-0f0839050febd5968"
+  }
+}

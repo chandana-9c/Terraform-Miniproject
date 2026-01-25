@@ -1,0 +1,8 @@
+----state list----
+data.aws_ami.amazon_linux
+aws_autoscaling_group.this
+aws_launch_template.this
+aws_security_group.asg_sg
+----output-------
+asg_name = "demo-asg"
+launch_template_id = "lt-0f0839050febd5968"
