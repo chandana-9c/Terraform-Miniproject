@@ -1,0 +1,2 @@
+remote_state_backend = "s3://terraform-state-backend-123456/app/terraform.tfstate"
+test_bucket_name = "terraform-backend-test-123456"

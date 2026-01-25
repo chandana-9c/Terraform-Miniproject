@@ -1,0 +1,12 @@
+{
+  "remote_state_backend": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://terraform-state-backend-123456/app/terraform.tfstate"
+  },
+  "test_bucket_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "terraform-backend-test-123456"
+  }
+}
