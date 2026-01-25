@@ -1,2 +1,0 @@
-public_subnet_id = "subnet-0c94989682b0688a0"
-vpc_id = "vpc-07c68c91be5f11f4b"
