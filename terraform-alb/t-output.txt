@@ -1,2 +1,0 @@
-alb_dns_name = "demo-alb-164537927.ap-southeast-2.elb.amazonaws.com"
-target_group_arn = "arn:aws:elasticloadbalancing:ap-southeast-2:712257475373:targetgroup/demo-tg/658ee256a0525b84"
