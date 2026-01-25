@@ -1,8 +1,0 @@
-----state list----
-data.aws_ami.amazon_linux
-aws_instance.this[0]
-----output-------
-environment = "prod"
-instance_ids = [
-  "i-0fbe44f058983ca8a",
-]
