@@ -1,0 +1,19 @@
+{
+  "environment": {
+    "sensitive": false,
+    "type": "string",
+    "value": "prod"
+  },
+  "instance_ids": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string"
+      ]
+    ],
+    "value": [
+      "i-0fbe44f058983ca8a"
+    ]
+  }
+}

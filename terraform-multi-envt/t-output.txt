@@ -1,0 +1,8 @@
+----state list----
+data.aws_ami.amazon_linux
+aws_instance.this[0]
+----output-------
+environment = "dev"
+instance_ids = [
+  "i-0c5fa2ae921364f90",
+]
