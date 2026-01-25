@@ -1,0 +1,41 @@
+STEP 6: Get VPC & Subnets
+aws ec2 describe-vpcs --filters Name=isDefault,Values=true --region ap-southeast-2
+aws ec2 describe-subnets --filters Name=vpc-id,Values=<VPC_ID> --region ap-southeast-2
+
+STEP 7: Deploy BLUE (Initial)
+
+terraform init
+terraform apply \
+  -var="vpc_id=vpc-xxxx" \
+  -var='public_subnets=["subnet-a","subnet-b"]' \
+  -var="active_color=blue"
+
+STEP 8: Verify BLUE
+
+terraform output alb_dns_name
+
+---------------------------------------
+Open in browser: http://<alb_dns_name>
+------------
+you should see => BLUE VERSION
+---------------------------------------
+
+STEP 9: Deploy GREEN + Switch Traffic (ZERO DOWNTIME)
+
+terraform apply \
+  -var="vpc_id=vpc-xxxx" \
+  -var='public_subnets=["subnet-a","subnet-b"]' \
+  -var="active_color=green"
+
+--------------------------
+Refresh browser → instantly shows:      => GREEN VERSION
+------------------------------------------------
+
+Step 10 : terraform destroy
+
+
+Confirm:
+
+ALB deleted
+EC2 instances terminated
+Target groups removed
