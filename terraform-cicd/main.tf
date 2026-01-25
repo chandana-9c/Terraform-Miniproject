@@ -3,3 +3,6 @@ resource "aws_s3_bucket" "cicd_demo" {
   force_destroy = true
 }
 
+
+
+
