@@ -24,4 +24,6 @@ jobs:
         run: terraform init
 
       - name: List Terraform state
-        run: terraform state list
+      #  run: terraform state list
+        run: terraform state list -state=terraform-cicd/terraform.tfstate
+
