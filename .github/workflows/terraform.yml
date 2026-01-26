@@ -26,17 +26,17 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-         working-directory: terraform-cicd
+        working-directory: terraform-cicd
 
       - name: Terraform Plan
         if: github.event_name == 'pull_request'
         run: terraform plan
-         working-directory: terraform-cicd
+        working-directory: terraform-cicd
 
       - name: Terraform Apply
         if: github.event_name == 'push'
         run: terraform apply -auto-approve
-         working-directory: terraform-cicd
+        working-directory: terraform-cicd
         
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
