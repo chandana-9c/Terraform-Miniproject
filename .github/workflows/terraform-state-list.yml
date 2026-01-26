@@ -22,6 +22,7 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
+        working-directory: terraform-cicd
 
       - name: List Terraform state
       #  run: terraform state list
