@@ -38,7 +38,7 @@ jobs:
       #  run: terraform init -input=false -backend=true -force-copy # added s3 as backend
         
       - name: Initialize Terraform with S3 backend
-        run: terraform init -input=false -backend=true
+        run: terraform init
         working-directory: terraform-cicd
 
       - name: Terraform Plan
