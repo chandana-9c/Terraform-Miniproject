@@ -30,6 +30,8 @@ jobs:
 
       - name: Initialize Terraform with S3 backend
         run: terraform init
+        working-directory: terraform-cicd
 
       - name: List Terraform state
         run: terraform state list
+        working-directory: terraform-cicd
