@@ -25,6 +25,8 @@ jobs:
         working-directory: terraform-cicd
 
       - name: List Terraform state
+        working-directory: terraform-cicd
+        run: terraform state list -state=terraform.tfstate
       #  run: terraform state list
-        run: terraform state list -state=terraform-cicd/terraform.tfstate
-
+      #  run: terraform state list -state=terraform-cicd/terraform.tfstate
+         
