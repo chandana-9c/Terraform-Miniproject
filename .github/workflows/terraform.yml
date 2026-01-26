@@ -33,9 +33,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-2
 
-      - name: Terraform Init
+     # - name: Terraform Init
        # run: terraform init
-        run: terraform init -input=false -backend=true -force-copy # added s3 as backend
+      #  run: terraform init -input=false -backend=true -force-copy # added s3 as backend
+        
+      - name: Initialize Terraform with S3 backend
+        run: yes yes | terraform init -input=false -backend=true
         working-directory: terraform-cicd
 
       - name: Terraform Plan
